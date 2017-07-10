@@ -11,6 +11,25 @@
 |
 */
 
+
+// DEFINE ADMIN ROUTES
+// ALL ADMIN ROUTES WILL BE PLACED HERE
+Route::group(array('prefix' => 'admin'), function(){
+    Route::get('/', function(){
+        return view('admin');
+    });
+});
+
+// DEFINE API ROUTES
+// ALL API ROUTES WILL BE PLACED HERE
+Route::group(array('prefix' => 'api'), function(){
+    Route::get('/', function(){
+        return view('api');
+    });
+});
+
+// STORE PREVIEW ROUTES
+// THIS WILL SIMULATE REAL SHOP LAYOUT
 Route::get('/', function () {
-    return view('welcome');
+    return view('preview');
 });
