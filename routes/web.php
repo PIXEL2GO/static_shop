@@ -11,13 +11,12 @@
 |
 */
 
+Auth::routes();
 
 // DEFINE ADMIN ROUTES
 // ALL ADMIN ROUTES WILL BE PLACED HERE
 Route::group(array('prefix' => 'admin'), function(){
-    Route::get('/', function(){
-        return view('admin');
-    });
+    Route::get('/', 'AdminController@index')->name('admin');
 });
 
 // DEFINE API ROUTES

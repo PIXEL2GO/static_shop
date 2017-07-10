@@ -1,1 +1,5 @@
-THIS IS API
+@extends('layouts.admin')
+
+@section('content')
+API
+@endsection
